@@ -18,6 +18,16 @@ peme *krijoElement(int vl)
     p->majte = NULL;
 }
 
+int afisho(peme *T)
+{
+    if (T == NULL)
+        return 0;
+    int resM = afisho(T->majte);
+    int resD = afisho(T->djathte);
+    printf("%d %d", resM, resD);
+    return T->vl;
+}
+
 void paraRendore(peme *T)
 {
     if (T != NULL)
